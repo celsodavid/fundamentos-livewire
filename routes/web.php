@@ -1,6 +1,6 @@
 <?php
 
-use App\Livewire\Contador;
+use App\Livewire\Frontend;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', Contador::class);
+Route::get('/', Frontend::class);
