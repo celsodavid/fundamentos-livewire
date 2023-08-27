@@ -1,5 +1,5 @@
 {{--Component Pai--}}
-<div>
+<div class="bg-gray-300 container mx-auto w-1/2">
     <h1>Meus Componentes</h1>
 
     {{-- Componente filho (reuso) --}}
