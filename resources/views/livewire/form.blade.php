@@ -1,7 +1,7 @@
 <div>
     <h1 class="text-xl">Formulário de Contato</h1>
 
-    <form wire:submit.prevent="submit" class="flex flex-col gap-4">
+    <form wire:submit.prevent="submit" id="contact" class="flex flex-col gap-4">
         <div class="flex flex-col">
             <label for="name">Informe o seu nome</label>
             <input wire:model.lazy="name" type="text" id="name" placeholder="Seu nome...">

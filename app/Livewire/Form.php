@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace App\Livewire;
 
 use Livewire\Component;
+use WireUi\Traits\WireUiActions;
 
 class Form extends Component
 {
+    use WireUiActions;
+
     public string $name = '';
 
     public string $email = '';
@@ -35,6 +38,12 @@ class Form extends Component
         // Enviar um e-mail para o destinatário
 
         // Guardar a informação no banco de dados
+
+        // dispara a notificação do para o front usando o wireUi
+        $this->notification()->success('Muito Obrigado', 'O seu contato foi enviado com sucesso!');
+
+        // poderia passar somente reset() sem params que limparia todos os atributos
+        $this->reset('name', 'email', 'message');
 
         dd($this->name, $this->email, $this->message);
     }
