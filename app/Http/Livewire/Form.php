@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Livewire;
+namespace App\Http\Livewire;
 
 use Livewire\Component;
-use WireUi\Traits\WireUiActions;
+use WireUi\Traits\Actions;
 
 class Form extends Component
 {
-    use WireUiActions;
+    use Actions;
 
     public string $name = '';
 
@@ -45,7 +45,7 @@ class Form extends Component
         // poderia passar somente reset() sem params que limparia todos os atributos
         $this->reset('name', 'email', 'message');
 
-        dd($this->name, $this->email, $this->message);
+        //dd($this->name, $this->email, $this->message);
     }
 
     public function render()
