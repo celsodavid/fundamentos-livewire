@@ -44,6 +44,9 @@ class Form extends Component
 
         // poderia passar somente reset() sem params que limparia todos os atributos
         $this->reset('name', 'email', 'message');
+
+        // Aqui é onde disparamos evento que na view o ‘script’ que possui addEventListener implementado
+        $this->dispatchBrowserEvent('fildFocus', ['element' => 'name']);
     }
 
     public function render()

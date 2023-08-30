@@ -4,7 +4,7 @@
     <form wire:submit.prevent="submit" id="contact" class="flex flex-col gap-4">
         <div class="flex flex-col">
             <label for="name">Informe o seu nome</label>
-            <input wire:model.lazy="name" type="text" id="name" placeholder="Seu nome...">
+            <input wire:model.defer="name" type="text" id="name" placeholder="Seu nome...">
             @error('name')
                 <span class="text-red-400">{{ $message }}</span>
             @enderror
@@ -31,3 +31,21 @@
         </div>
     </form>
 </div>
+
+@section('scripts')
+    <script>
+        // Método Livewire
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     Livewire.hook('message.processed', (message, component) => {
+        //         const name = document.getElementById('name');
+        //         name.focus();
+        //     })
+        // });
+
+        // Método personalizado
+        window.addEventListener('fildFocus', event => {
+            const element = document.getElementById(event.detail.element);
+            element.focus();
+        });
+    </script>
+@endsection
