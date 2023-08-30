@@ -5,12 +5,9 @@ declare(strict_types=1);
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use WireUi\Traits\Actions;
 
 class Form extends Component
 {
-    use Actions;
-
     public string $name = '';
 
     public string $email = '';
@@ -39,13 +36,14 @@ class Form extends Component
 
         // Guardar a informação no banco de dados
 
-        // dispara a notificação do para o front usando o wireUi
-        $this->notification()->success('Muito Obrigado', 'O seu contato foi enviado com sucesso!');
+        // dipara um evento para quem estiver a escutar chamar o metodo
+        // ideal colocar antes do reset dos campos caso queira passar algum parametro para o metodos a se chamado
+        $this->emit('message::success', [
+            'name' => $this->name,
+        ]);
 
         // poderia passar somente reset() sem params que limparia todos os atributos
         $this->reset('name', 'email', 'message');
-
-        //dd($this->name, $this->email, $this->message);
     }
 
     public function render()
