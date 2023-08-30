@@ -8,6 +8,8 @@
   * `sail art make:livewire contador`
 * Componente Frontend:
   * `sail art make:livewire frontend`
+* Componente Buscador de CEP
+  * `sail art make:livewire find-zipcode`
 
 ### Instalação Tailwind CSS
 * [Install TailwindCss](https://jobstreinamentos.com.br/support/knowledgebase.php?article=3)
@@ -21,3 +23,7 @@
   * Uso no frontend
 * [Dispatching Browser Events](https://laravel-livewire.com/docs/2.x/events#browser)
   * Uso no frontend usando o dispatch
+
+### API(s) Utilizada(s)
+* Buscado de CEP
+  * [ViaCep](https://viacep.com.br/)

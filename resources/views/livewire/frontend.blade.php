@@ -9,5 +9,7 @@
     {{-- Prioridade maxima depois do mount --}}
 {{--    <livewire:contador :count="$defaultCounter" />--}}
 
-    <livewire:form />
+{{--    <livewire:form />--}}
+
+    <livewire:find-zipcode />
 </div>
