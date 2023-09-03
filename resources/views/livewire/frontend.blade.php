@@ -1,5 +1,5 @@
 {{--Component Pai--}}
-<div class="p-6 bg-gray-200 container mx-auto w-1/2">
+<div class="p-6 bg-gray-200 container mx-auto">
     <x-notifications />
 
     <h1 class="text-2xl text-center">Meus Componentes</h1>
@@ -18,5 +18,7 @@
 {{--        <livewire:user-card :wire:key="'users-' . $user->id" :user-id="$user->id" />--}}
 {{--    @endforeach--}}
 
-    <livewire:form-upload />
+{{--    <livewire:form-upload />--}}
+
+    <livewire:customer-list />
 </div>

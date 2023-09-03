@@ -21,6 +21,16 @@
 * [Get-Started](https://livewire-wireui.com/docs/get-started)
   * use `sail composer require wireui/wireui:^2.x-dev`
 
+### Instalação Filament Datatable
+* [Tables](https://filamentphp.com/docs/2.x/tables/installation) (Project 4 - Componente Custome Crud with WireUi Notification Complete)
+  * `sail composer require filament/tables:"^2.0"`
+  * with new projects laravel
+    * `sail artisan tables:install`
+    * `sail npm install`
+    * `sail npm run dev`
+  * project laravel exisists
+    * `sail npm install alpinejs @alpinejs/focus postcss tailwindcss @tailwindcss/forms @tailwindcss/typography --save-dev`
+
 ### Hooks Livewire (Exemplo 1)
 * [JS-Hooks](https://laravel-livewire.com/docs/2.x/lifecycle-hooks#js-hooks)
   * Uso no frontend

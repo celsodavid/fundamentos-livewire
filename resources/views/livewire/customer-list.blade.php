@@ -1,3 +1,5 @@
 <div>
-    {{-- In work, do what you enjoy. --}}
+    <h1>Lista de Clientes</h1>
+
+    {{ $this->table }}
 </div>
