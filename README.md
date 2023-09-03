@@ -27,3 +27,6 @@
 ### API(s) Utilizada(s)
 * Buscado de CEP
   * [ViaCep](https://viacep.com.br/)
+
+### Dicas
+* [Livewire Uploads](https://laravel-livewire.com/docs/2.x/file-uploads#basic-upload)

@@ -13,8 +13,10 @@
 
 {{--    <livewire:find-zipcode />--}}
 
-    @foreach($users as $user)
-        {{-- ao chamar varios componentes dentro de um loop definir um :wire:key --}}
-        <livewire:user-card :wire:key="'users-' . $user->id" :user-id="$user->id" />
-    @endforeach
+{{--    @foreach($users as $user)--}}
+{{--         ao chamar varios componentes dentro de um loop definir um :wire:key --}}
+{{--        <livewire:user-card :wire:key="'users-' . $user->id" :user-id="$user->id" />--}}
+{{--    @endforeach--}}
+
+    <livewire:form-upload />
 </div>
