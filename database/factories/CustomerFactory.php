@@ -16,7 +16,7 @@ class CustomerFactory extends Factory
         return [
             'name' => fake()->name,
             'email' => fake()->unique()->email,
-            'document' => random_int(11111111, 999999999),
+            'document' => (string) random_int(11111111, 999999999),
             'birthdate' => fake()->date,
             'social_link' => 'https://' . fake()->domainName,
         ];

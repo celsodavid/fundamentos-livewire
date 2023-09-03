@@ -20,5 +20,11 @@
 
 {{--    <livewire:form-upload />--}}
 
-    <livewire:customer-list />
+    @if($screen === 'list')
+        <livewire:customer-list />
+    @endif
+
+    @if($screen === 'add')
+        <livewire:customer-add />
+    @endif
 </div>

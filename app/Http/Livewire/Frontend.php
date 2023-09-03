@@ -13,6 +13,8 @@ class Frontend extends Component
 {
     use Actions;
 
+    public string $screen = 'list';
+
     public ?Collection $users = null;
 
     protected $listeners = [
@@ -22,6 +24,10 @@ class Frontend extends Component
     public function mount(): void
     {
         $this->users = User::all();
+
+        if (str(request()?->fullUrl())->contains('adicionar')) {
+            $this->screen = 'add';
+        }
     }
 
     public function showSuccessMessage(array $params): void
