@@ -47,6 +47,13 @@ class Frontend extends Component
 
     public function render()
     {
+//        if (session()->has('removedCustomer')) {
+//            $name = session('removedCustomer');
+//            $this->notification()->success('Cliente Removido', "O cliente {$name} foi removido com sucesso!");
+//
+//            session()->forget('removedCustomer');
+//        }
+
         return view('livewire.frontend');
     }
 }

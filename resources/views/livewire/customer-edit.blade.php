@@ -46,7 +46,8 @@
             @enderror
         </div>
 
-        <div>
+        <div class="flex justify-between">
+            <button wire:click="remove" class="px-4 py-2 bg-red-500 hover:bg-red-400 rounded-full text-white">Excluir Cliente</button>
             <button class="px-4 py-2 bg-green-500 hover:bg-green-400 rounded-full text-white">Altualizar Cliente</button>
         </div>
     </form>

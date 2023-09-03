@@ -4,7 +4,9 @@ namespace App\Http\Livewire;
 
 use App\Models\Customer;
 use Carbon\Carbon;
+use Illuminate\Http\RedirectResponse;
 use Livewire\Component;
+use Livewire\Redirector;
 
 class CustomerEdit extends Component
 {
@@ -71,6 +73,19 @@ class CustomerEdit extends Component
         }
 
         return $this->birthdate;
+    }
+
+    public function remove(): RedirectResponse|Redirector
+    {
+        $customerName = $this->customer->name;
+
+        $this->customer->delete();
+
+        $this->reset();
+
+        session()->put('removedCustomer', $customerName);
+
+        return to_route('customer-list');
     }
 
     public function mount(): void
