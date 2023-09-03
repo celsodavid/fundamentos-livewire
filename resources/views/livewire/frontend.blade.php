@@ -27,4 +27,8 @@
     @if($screen === 'add')
         <livewire:customer-add />
     @endif
+
+    @if($screen === 'edit')
+        <livewire:customer-edit :customer="$customer" />
+    @endif
 </div>

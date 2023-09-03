@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Livewire;
 
+use App\Models\Customer;
 use App\Models\User;
 use Illuminate\Support\Collection;
 use Livewire\Component;
@@ -17,16 +18,23 @@ class Frontend extends Component
 
     public ?Collection $users = null;
 
+    public ?Customer $customer = null;
+
     protected $listeners = [
         'message::success' => 'showSuccessMessage',
     ];
 
-    public function mount(): void
+    public function mount(?Customer $customer): void
     {
         $this->users = User::all();
 
         if (str(request()?->fullUrl())->contains('adicionar')) {
             $this->screen = 'add';
+        }
+
+        if (!is_null($customer) && str(request()?->fullUrl())->contains('editar')) {
+            $this->customer = $customer;
+            $this->screen = 'edit';
         }
     }
 
