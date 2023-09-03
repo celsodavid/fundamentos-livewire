@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Http\Livewire;
 
+use App\Models\User;
+use Illuminate\Support\Collection;
 use Livewire\Component;
 use WireUi\Traits\Actions;
 
@@ -11,9 +13,16 @@ class Frontend extends Component
 {
     use Actions;
 
+    public ?Collection $users = null;
+
     protected $listeners = [
         'message::success' => 'showSuccessMessage',
     ];
+
+    public function mount(): void
+    {
+        $this->users = User::all();
+    }
 
     public function showSuccessMessage(array $params): void
     {
