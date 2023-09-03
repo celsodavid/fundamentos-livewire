@@ -3,13 +3,16 @@
 #### Instalação Livewire
 * `composer require livewire/livewire`
 
-### Projeto 
+### Projetos 
 * Componente Contador:
   * `sail art make:livewire contador`
 * Componente Frontend:
   * `sail art make:livewire frontend`
-* Componente Buscador de CEP
+* Componente Buscador de CEP:
   * `sail art make:livewire find-zipcode`
+* Componente Custome Crud with WireUi Notification Complete:
+  * `sail art make:livewire custome-list`
+  * `sail art make:model Customer -mf`
 
 ### Instalação Tailwind CSS
 * [Install TailwindCss](https://jobstreinamentos.com.br/support/knowledgebase.php?article=3)
