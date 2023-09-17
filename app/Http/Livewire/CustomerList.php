@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Customer;
 use Filament\Tables;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
 use Illuminate\Database\Eloquent\Builder;
@@ -33,6 +34,15 @@ class CustomerList extends Component implements HasTable
                 ->label('Nascimento')
                 ->dateTime('d/m/Y'),
 
+        ];
+    }
+
+    protected function getTableActions(): array
+    {
+        return [
+            Action::make('edit')
+                ->url(fn (Customer $record): string => route('customer-edit', $record))
+                ->openUrlInNewTab()
         ];
     }
 
