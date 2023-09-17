@@ -14,6 +14,8 @@ class CustomerList extends Component implements HasTable
 {
     use InteractsWithTable;
 
+    public int $totalCustomer = 0;
+
     public function getTableQuery(): Builder
     {
         return Customer::query();
@@ -44,6 +46,16 @@ class CustomerList extends Component implements HasTable
                 ->url(fn (Customer $record): string => route('customer-edit', $record))
                 ->openUrlInNewTab()
         ];
+    }
+
+    public function updateTotalCustomers(): void
+    {
+        $this->totalCustomer = Customer::query()->count();
+    }
+
+    public function mount(): void
+    {
+        $this->totalCustomer = Customer::query()->count();
     }
 
     public function render()
