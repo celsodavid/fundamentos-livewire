@@ -11,5 +11,8 @@ Route::get('/clientes', Frontend::class)->name('customer-list');
 Route::get('/clientes/adicionar', Frontend::class)->name('customer-add');
 Route::get('/clientes/editar/{customer}', Frontend::class)->name('customer-edit');
 
+Route::get('/products', Frontend::class)->name('product-list');
+
+
 // Exemplo de router model bind no livewire
 // Route::get('/clientes/{customer}', Frontend::class);

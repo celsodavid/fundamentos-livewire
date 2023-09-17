@@ -20,15 +20,17 @@
 
 {{--    <livewire:form-upload />--}}
 
-    @if($screen === 'list')
-        <livewire:customer-list />
-    @endif
+{{--    @if($screen === 'list')--}}
+{{--        <livewire:customer-list />--}}
+{{--    @endif--}}
 
-    @if($screen === 'add')
-        <livewire:customer-add />
-    @endif
+{{--    @if($screen === 'add')--}}
+{{--        <livewire:customer-add />--}}
+{{--    @endif--}}
 
-    @if($screen === 'edit')
-        <livewire:customer-edit :customer="$customer" />
-    @endif
+{{--    @if($screen === 'edit')--}}
+{{--        <livewire:customer-edit :customer="$customer" />--}}
+{{--    @endif--}}
+
+    <livewire:product-list />
 </div>

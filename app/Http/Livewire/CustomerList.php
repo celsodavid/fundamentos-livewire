@@ -35,7 +35,6 @@ class CustomerList extends Component implements HasTable
             Tables\Columns\TextColumn::make('birthdate')
                 ->label('Nascimento')
                 ->dateTime('d/m/Y'),
-
         ];
     }
 
