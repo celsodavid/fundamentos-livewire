@@ -43,3 +43,5 @@
 
 ### Dicas
 * [Livewire Uploads](https://laravel-livewire.com/docs/2.x/file-uploads#basic-upload)
+* [Livewire Actions](https://filamentphp.com/docs/2.x/tables/actions#single-actions)
+* [Livewire Collapsible](https://filamentphp.com/docs/2.x/tables/layout#collapsible-content)
